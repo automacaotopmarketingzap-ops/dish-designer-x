@@ -4,6 +4,7 @@ import { CATEGORIES } from "@/lib/menu-data";
 export function CategoryNav() {
   const [active, setActive] = useState<string>(CATEGORIES[0].id);
 
+
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
     CATEGORIES.forEach((c) => {

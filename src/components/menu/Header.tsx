@@ -2,9 +2,8 @@ import { Clock, MapPin, Bike } from "lucide-react";
 import { RESTAURANT } from "@/lib/menu-data";
 
 function isOpen(): boolean {
-  const now = new Date();
-  const h = now.getHours();
-  return h >= 11 && h < 23;
+  const h = new Date().getHours();
+  return (h >= 11 && h < 14) || (h >= 18 && h < 22);
 }
 
 function isRodizioDay(): boolean {
@@ -64,7 +63,7 @@ export function MenuHeader() {
         </div>
 
         <div className="flex flex-wrap items-center gap-2 text-xs">
-          <Chip icon={<Clock className="size-3.5" />} label={`11h–23h`} />
+          <Chip icon={<Clock className="size-3.5" />} label={RESTAURANT.hours} />
           <Chip icon={<Bike className="size-3.5" />} label={RESTAURANT.deliveryEta} />
           <Chip label={`Pedido mín. R$ ${RESTAURANT.minOrder}`} />
           {rodizio && (

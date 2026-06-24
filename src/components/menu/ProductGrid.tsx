@@ -25,7 +25,7 @@ export function ProductGrid({ onSelect, query }: { onSelect: (p: Product) => voi
 
   return (
     <div className="mx-auto w-full max-w-5xl px-3 pb-32">
-      {CATEGORIES.filter((c) => c.id !== "destaques").map((cat) => {
+      {CATEGORIES.map((cat) => {
         const items = filtered.filter((p) => p.category === cat.id);
         if (items.length === 0) return null;
         return (

@@ -20,7 +20,6 @@ export type Product = {
 };
 
 export const CATEGORIES = [
-  { id: "destaques", label: "Destaques" },
   { id: "rodizio", label: "Rodízio" },
   { id: "a-la-carte", label: "À la carte" },
   { id: "pizza", label: "Pizzas" },
@@ -67,24 +66,24 @@ const TAMANHO_PIZZA: ModifierGroup = {
 
 export const PRODUCTS: Product[] = [
   {
-    id: "rodizio-completo",
-    name: "Rodízio Completo",
-    description: "Buffet de saladas + carnes nobres na brasa à vontade + sobremesa do dia.",
-    price: 79.9,
+    id: "rodizio-adulto",
+    name: "Rodízio de Carnes — Adulto",
+    description: "Buffet de saladas + cortes nobres na brasa à vontade (picanha, fraldinha, maminha, linguiça e mais). Toda quinta e domingo às 11h30 e 18h.",
+    price: 48.9,
     image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=900&h=700&fit=crop&q=80",
     category: "rodizio",
     tags: ["mais_pedido"],
     pairsWith: ["coca-2l", "heineken"],
   },
   {
-    id: "rodizio-premium",
-    name: "Rodízio de Carnes Premium",
-    description: "Picanha, fraldinha, maminha, linguiça e mais — na brasa. Toda quinta e domingo.",
-    price: 59.9,
+    id: "rodizio-infantil",
+    name: "Rodízio de Carnes — Infantil",
+    description: "Para crianças até 10 anos. Buffet de saladas + carnes na brasa. Toda quinta e domingo.",
+    price: 29.9,
     image: "https://images.unsplash.com/photo-1544025162-d76538b0fee8?w=900&h=700&fit=crop&q=80",
     category: "rodizio",
     tags: ["novo"],
-    pairsWith: ["coca-2l", "heineken"],
+    pairsWith: ["guarana-2l"],
   },
   {
     id: "bife-ancho",
@@ -276,7 +275,7 @@ export const RESTAURANT = {
   city: "Juara — MT",
   minOrder: 25,
   deliveryEta: "~40 min",
-  whatsapp: "5566999999999",
-  hours: { open: "11:00", close: "23:00" },
-  rodizioDays: [4, 0], // Thursday, Sunday
+  whatsapp: "5566XXXXXXXX", // ← coloque o número real aqui (formato: 5566999999999)
+  hours: "11h–14h e 18h–22h",
+  rodizioDays: [4, 0], // Qui=4, Dom=0
 };
