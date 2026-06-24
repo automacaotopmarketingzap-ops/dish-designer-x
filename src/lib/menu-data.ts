@@ -275,7 +275,7 @@ export const RESTAURANT = {
   city: "Juara — MT",
   minOrder: 25,
   deliveryEta: "~40 min",
-  whatsapp: "5566XXXXXXXX", // ← coloque o número real aqui (formato: 5566999999999)
+  whatsapp: "5566999535533",
   hours: "11h–14h e 18h–22h",
   rodizioDays: [4, 0], // Qui=4, Dom=0
 };
